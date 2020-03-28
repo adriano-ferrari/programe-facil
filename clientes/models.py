@@ -11,3 +11,11 @@ class Cliente(models.Model):
     def __str__(self):
         return self.nome
     
+
+class Telefone(models.Model):
+    numero = models.CharField(max_length=15, null=False)
+    descricao = models.CharField(max_length=20)
+    cliente = models.ForeignKey(Cliente, on_delete=models.PROTECT)
+
+    def __str__(self):
+        return self.descricao + ' - ' + self.numero
