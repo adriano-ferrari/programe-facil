@@ -7,4 +7,10 @@
     <li>item 2</li>
 </ul>
 
-{{ minha_variavel }}
+{% if sexo == 'M' or sexo == 'm' %}
+    Olá senhor {{ nome }}
+{% elif sexo == 'F' %}
+    Olá senhora {{ nome }}
+{% else %}
+    Olá {{ nome }}
+{% endif %}
