@@ -7,6 +7,7 @@
     <li>item 2</li>
 </ul>
 
+<p>Condicionais</p>
 {% if sexo == 'M' or sexo == 'm' %}
     Olá senhor {{ nome }}
 {% elif sexo == 'F' %}
@@ -14,3 +15,27 @@
 {% else %}
     Olá {{ nome }}
 {% endif %}
+<br>
+<br>
+<p>Loops</p>
+<ul>
+    {% for pessoa in lista %}
+        <li>Olá {{ pessoa.nome }}</li>
+    {% endfor %}
+</ul>
+<br>
+<br>
+<p>Loops</p>
+<ul>
+    {% for pessoa in lista %}
+
+        {% if pessoa.sexo == 'M' or pessoa.sexo == 'm' %}
+            <li>Olá senhor {{ nome }}</li>
+        {% elif pessoa.sexo == 'F' or pessoa.sexo == 'f' %}
+            <li>Olá senhora {{ nome }}</li>
+        {% else %}
+            <li>Olá {{ nome }}</li>
+        {% endif %}
+
+    {% endfor %}
+</ul>
